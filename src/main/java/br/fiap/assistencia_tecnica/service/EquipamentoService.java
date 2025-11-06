@@ -19,7 +19,7 @@ public class EquipamentoService {
         this.equipamentoRepository = equipamentoRepository;
     }
 
-    public void inserir(EquipamentoDTO dto) {
+    public Equipamento inserir(EquipamentoDTO dto) {
         var cliente = clienteRepository.findById(dto.getCliente().getId())
                 .orElseThrow(() -> new NoSuchElementException("Cliente não encontrado"));
 

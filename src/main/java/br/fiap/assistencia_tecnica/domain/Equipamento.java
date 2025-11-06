@@ -21,9 +21,18 @@ public class Equipamento {
         foreignKey = @ForeignKey(name = "FK_EQUIP_CLIENTE"))
     private Cliente cliente;
 
+    @Column(name = "MARCA", length = 50)
     private String marca;
+
+    @Column(name = "MODELO", length = 50)
     private String modelo;
+
+    @Column(name = "TIPO", length = 50)
     private String tipo;
+
+    @Column(name = "NUMERO_SERIE", length = 80, unique = true)
     private String numeroSerie;
+
+    @Column(name = "DATA_CADASTRO", nullable = false)
     private LocalDate dataCadastro;
 }
