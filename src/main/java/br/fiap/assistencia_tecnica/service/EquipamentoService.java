@@ -32,4 +32,7 @@ public class EquipamentoService {
         equipamento.setCliente(cliente);
         return equipamentoRepository.save(equipamento);
     }
+
+
+
 }
